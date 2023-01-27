@@ -1,0 +1,152 @@
+.cabecalho__menu-hamburguer{
+    height: 34px;
+    width: 34px;
+    background-image: url(../img/Menu.svg);
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cabecalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.container__img {
+    padding: 1em;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 65vw;
+    z-index:9999;
+}
+
+.container_botao{
+    display: none;
+}
+
+.container_botao:checked ~.lista-menu{
+    display: block;
+}
+
+.lista-menu__titulo {
+    background-color: var(--branco);
+    color: var(--laranja);
+    font-weight: 700;
+    padding: 1em;
+}
+
+
+.lista-menu__link {
+    color: var(--azul);
+    background-color: var(--branco);
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.lista-menu__link:hover {
+    background: var(--azul);
+    color: var(--branco);
+}
+
+.cabecalho__titulo {
+    display: none;
+}
+
+.opcoes{
+    display: none;
+}
+
+.container__links {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--cinza-escuro);
+    font-size: 20PX;
+}
+.container__img-span {
+    display: none;
+}
+
+
+
+
+
+@media screen and (min-width: 1024px) {
+
+    .cabecalho{
+        justify-content: space-around;
+    }
+
+    .cabecalho__menu-hamburguer{
+        display: none;
+    }
+
+    .container__img--transparente{
+        display: none;
+    }
+
+    .cabecalho__titulo {
+        font-family: var(--font-secundario);
+        font-size: 30px;
+        display: block;
+        margin-bottom: -5px;
+    }
+    .cabecalho__titulo--negrito {
+        font-weight: 700;
+    }
+
+    .opcoes {
+        display: flex;
+        gap: 1em;
+        text-transform: uppercase;
+        position: relative;
+        align-items: center;
+    }
+
+    .opcoes__item {
+        color: black;
+        font-size: 16px;
+    }
+
+    .opcoes__link{
+        color: black;
+        text-decoration: none;
+        padding: 1em;
+    }
+
+    .botao-categoria {
+        display: none;
+    }
+
+    .botao-categoria:checked ~ .lista-menu{
+        display: block;
+        width: auto;
+    }
+
+    .botao-categoria:checked ~ .opcoes-categoria {
+        background: var(--azul-degrade);
+        padding: 1em;
+        color: var(--branco);
+    }
+}
+
+
+@media screen and (min-width: 1728px) {
+    .container__img-span {
+        display: block;
+    }
+}
